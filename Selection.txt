@@ -9,3 +9,5 @@ select * from "Order";
 select * from item;
 
 select * from supplier;
+
+select * from supplier_and_item;

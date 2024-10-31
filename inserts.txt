@@ -1,0 +1,99 @@
+insert into customer values( 2, 0567843277, 'zoz@gmail.com', 'palestine', 'nablus', 'itihad',);
+insert into customer values( 3, 0567553277, 'bob@gmail.com', 'palestine', 'nablus', 'alquds') ;
+insert into customer values( 6, 0567848977, 'lol@gmail.com', 'palestine', 'nablus', 'itihad');
+insert into customer values( 8, 0567888888, 'kok@gmail.com', 'palestine', 'nablus', 'timesquare') ;
+insert into customer values( 7, 0567843277, 'sos@gmail.com', 'palestine', 'nablus', 'najah');
+UPDATE customer
+SET FirstName = CASE customer_id
+    WHEN 2 THEN 'Imtyaz'
+    WHEN 3 THEN 'Bob'
+    WHEN 6 THEN 'lol'
+    WHEN 8 THEN 'kok'
+    WHEN 7 THEN 'sos'
+END,
+MiddleName = CASE customer_id
+    WHEN 2 THEN 'A'
+    WHEN 3 THEN 'B'
+    WHEN 6 THEN 'C'
+    WHEN 8 THEN 'D'
+    WHEN 7 THEN 'E'
+END,
+LastName = CASE customer_id
+    WHEN 2 THEN 'Smith'
+    WHEN 3 THEN 'Johnson'
+    WHEN 6 THEN 'Williams'
+    WHEN 8 THEN 'Brown'
+    WHEN 7 THEN 'Jones'
+END
+WHERE customer_id IN (2, 3, 6, 8, 7);
+UPDATE customer SET gender = 'Female' WHERE customer_id = 2;
+UPDATE customer SET gender = 'Male' WHERE customer_id = 3;
+UPDATE customer SET gender = 'Male' WHERE customer_id = 6;
+UPDATE customer SET gender = 'Male' WHERE customer_id = 8;
+UPDATE customer SET gender = 'Male' WHERE customer_id = 7;
+
+
+
+insert into Item values (5, 'Brake Pad', 800, 'Brake Parts', 100);
+INSERT INTO Item (Item_ID, item_name, Price, item_type, Stock_Quantity)
+VALUES
+(2, 'Oil Filter', 9.99, 'Engine Parts', 150),
+(3, 'Spark Plug', 2.50, 'Engine Parts', 200),
+(4, 'Tire', 79.99, 'Tires', 50),
+(6, 'Door', 600, 'Doors', 40);
+
+
+
+
+INSERT INTO order_details (order_details_id, order_id, item_id, price, quantity)
+VALUES (11, 1, 2, 90, 15),
+(22,2, 3, 70, 5),
+(33,3, 4, 67,12),
+(44, 4, 5, 190, 7),
+(55, 5, 6 ,400, 2);
+
+
+
+INSERT INTO "Order" (order_id, customer_id, employee_id, subtotal, total_price)
+VALUES (1, 101, 2001, 500.00, 450.00),
+(2, 102, 2002, 300.00, 300.00),
+(3, 103, 2003, 800.00, 700.00),
+(4, 7, 8, 98.58, 43.88 ),
+(5, 8, 80, 300.99, 356.87);
+
+
+
+
+insert into supplier_and_item values (2,1);
+insert into supplier_and_item values (4,2);
+insert into supplier_and_item values (4,3);
+insert into supplier_and_item values (5,4);
+insert into supplier_and_item values (6,5);
+
+
+
+INSERT INTO supplier values(1,'fadi', 'issa', 056789334, 'fadi@gmail.com', 'jordan', 'amman' , 'bluestreet', '123-9033' ) ;
+INSERT INTO supplier values(2, 'sami', 'swift', 056745334, 'sami@gmail.com', 'jordan', 'salt' , 'widestreet', '909-675' ) ;
+INSERT INTO supplier values(3, 'mahdi','essam', 0564589334, 'mahdi@outlook.com', 'italy', 'vieena', 'blaza', '100-9323') ;
+INSERT INTO supplier values(4, 'sally' , 'missa', 056709844, 'mady@gmail.com', 'USA', 'newyork', 'boldstreet', '97y4-23d2' ) ;
+INSERT INTO supplier values(5, 'mona', 'mohammad', 0583839844, 'mona@gmail.com', 'france', 'monaco', 'shopstreet', 'u8e3-999') ;
+
+
+
+insert into users values( 1, 'lina', 'li19', 'Employee');
+insert into users values( 3, 'rashad', 'ra12', 'Admin') ;
+insert into users values( 5, 'nana', 'na15', 'Employee') ;
+insert into users values( 8, 'essam', 'ess14', 'Employee') ;
+insert into users values( 4, 'hala', 'zo90', 'Admin');
+
+
+INSERT INTO Employee (employee_id, first_name, middle_name, last_name, gender, salary, birth_date, hire_date, email, phone, country, city, address, zip_code, user_id) 
+VALUES
+(1, 'lina', 'momtaz', 'shakhshir', 'Female', 5000.00, '2004-12-12', '2024-11-15', 'lina@najah.edu', 599320080, 'palestine', 'nablus', 'etehad', '0055', 1),
+(3, 'Rashad', 'Ahmad', 'Hindi', 'Male', 80000.00, '2004-10-19', '2023-10-16', 'rashad@najah.edu', 568127125, 'palestine', 'nablus', 'hanthala', '0145', 3),
+(7, 'nana', 'ahmad', 'hindi', 'Female', 7000.00, '2001-11-16', '2024-11-15', 'lina@najah.edu', 599375180, 'palestine', 'nablus', 'nnu', '0485', 5),
+(8, 'essam', 'momtaz', 'shakhshir', 'Male', 40000.00, '2006-07-07', '2024-10-10', 'essam@najah.edu', 599345380, 'palestine', 'nablus', 'etehad', '0055', 8),
+(80, 'hala', 'bader', 'kukhun', 'Female', 70000.00, '1977-12-15', '2024-10-15', 'hala@najah.edu', 599320097, 'palestine', 'nablus', 'rammallah', '0180', 4),
+(10, 'mohammad', 'momtaz', 'shakhshir', 'Male', 5000.00, '2004-12-12', '2024-11-15', 'lina@najah.edu', 599320080, 'palestine', 'nablus', 'etehad', '0055', 10);
+
+

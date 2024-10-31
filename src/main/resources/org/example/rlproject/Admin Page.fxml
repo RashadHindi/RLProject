@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.rlproject.AdminController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="1.0" layoutY="1.0" prefHeight="435.2" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="45.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutY="-3.2" prefHeight="52.0" prefWidth="1100.0" style="-fx-background-color: #313133;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0">
+                           <children>
+                              <Label layoutX="65.0" layoutY="11.0" prefHeight="30.0" prefWidth="206.0" text="Administrator Page" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                              <ImageView fitHeight="40.0" fitWidth="46.0" layoutX="14.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/people.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="555.0" prefWidth="211.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="555.0" prefWidth="211.0" style="-fx-background-color: #313133;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="92.0" fitWidth="92.0" layoutX="60.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/user.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <Label alignment="CENTER" layoutX="14.0" layoutY="106.0" prefHeight="26.0" prefWidth="183.0" text="Welcome" textFill="WHITE">
+                                 <font>
+                                    <Font name="Tahoma" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="AdminUserName" alignment="CENTER" layoutX="8.0" layoutY="132.0" prefHeight="26.0" prefWidth="195.0" text="Username" textFill="WHITE">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="83.5999755859375" endY="-1.52587890625E-5" layoutX="104.0" layoutY="162.0" startX="-80.39999389648438" startY="-1.52587890625E-5" stroke="#9c9999" />
+                              <Button fx:id="Home" layoutX="16.0" layoutY="167.0" mnemonicParsing="false" onAction="#HomeButton" prefHeight="26.0" prefWidth="180.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="Home" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                              <ImageView fitHeight="25.0" fitWidth="24.0" layoutX="36.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button fx:id="AddEmployee" layoutX="16.0" layoutY="249.0" mnemonicParsing="false" onAction="#AddEmployee" prefHeight="26.0" prefWidth="180.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="Add Employee" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="ViewEmployee" layoutX="16.0" layoutY="293.0" mnemonicParsing="false" onAction="#ViewEmployeeButton" prefHeight="26.0" prefWidth="180.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="View Employee" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="AddSupplier" layoutX="16.0" layoutY="337.0" mnemonicParsing="false" onAction="#AddSupplierButton" prefHeight="26.0" prefWidth="180.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="Add Supplier" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="ViewSupplier" layoutX="16.0" layoutY="378.0" mnemonicParsing="false" onAction="#ViewSupplierButton" prefHeight="26.0" prefWidth="180.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="View Supplier" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="AddItem" layoutX="16.0" layoutY="421.0" mnemonicParsing="false" onAction="#AddItemButton" prefHeight="26.0" prefWidth="180.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="Add Item" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="ViewItem" layoutX="16.0" layoutY="462.0" mnemonicParsing="false" onAction="#ViewItemButton" prefHeight="26.0" prefWidth="180.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="View Item" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="Logout" layoutX="16.0" layoutY="505.0" mnemonicParsing="false" onAction="#LogoutButton" prefHeight="26.0" prefWidth="180.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="Log Out" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="Home1" layoutX="16.0" layoutY="207.0" mnemonicParsing="false" onAction="#HomeButton" prefHeight="26.0" prefWidth="180.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="Add Admin" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="554.0" prefWidth="874.0" style="-fx-background-color: #313133;" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="HomeAnchore" layoutX="11.0" layoutY="14.0" prefHeight="527.0" prefWidth="868.0" style="-fx-background-color: #272727; -fx-background-radius: 15;" visible="false">
+                           <children>
+                              <AnchorPane layoutX="10.0" layoutY="39.0" prefHeight="210.0" prefWidth="848.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;">
+                                 <children>
+                                    <AnchorPane layoutX="32.0" layoutY="12.0" prefHeight="186.0" prefWidth="230.0" style="-fx-background-color: #313133; -fx-background-radius: 15;">
+                                       <children>
+                                          <Label layoutX="71.0" layoutY="64.0" prefHeight="26.0" prefWidth="142.0" text="Number of Orders" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="13.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../images/rrrr.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="NumberOfOrders" alignment="CENTER" layoutX="43.0" layoutY="112.0" prefHeight="26.0" prefWidth="142.0" text="0" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="318.0" layoutY="12.0" prefHeight="186.0" prefWidth="233.0" style="-fx-background-color: #313133; -fx-background-radius: 15; -fx-effect: (three-pass-box, rgba (0, 0,0,0.5), 6, 0,0,0);">
+                                       <children>
+                                          <Label layoutX="85.0" layoutY="73.0" prefHeight="26.0" prefWidth="142.0" text="Number of Suppliers" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="NumberOfSuppliers" alignment="CENTER" layoutX="43.0" layoutY="115.0" prefHeight="26.0" prefWidth="142.0" text="0" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="52.0" fitWidth="51.0" layoutX="24.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../images/arrangement.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="594.0" layoutY="13.0" prefHeight="184.0" prefWidth="240.0" style="-fx-background-color: #313133; -fx-background-radius: 15;">
+                                       <children>
+                                          <Label layoutX="73.0" layoutY="71.0" prefHeight="26.0" prefWidth="146.0" text="Number of Customers" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="NumberOfCustomer" alignment="CENTER" layoutX="47.0" layoutY="113.0" prefHeight="26.0" prefWidth="142.0" text="0" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="58.0" fitWidth="67.0" layoutX="6.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../images/people.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="285.0" prefHeight="210.0" prefWidth="848.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;">
+                                 <children>
+                                    <AnchorPane layoutX="175.0" layoutY="12.0" prefHeight="186.0" prefWidth="222.0" style="-fx-background-color: #313133; -fx-background-radius: 15;">
+                                       <children>
+                                          <Label layoutX="74.0" layoutY="80.0" prefHeight="26.0" prefWidth="148.0" text="Number of Employee" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="60.0" fitWidth="58.0" layoutX="11.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../images/employee.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="NumberOfEmployees" alignment="CENTER" layoutX="40.0" layoutY="114.0" prefHeight="26.0" prefWidth="142.0" text="0" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="441.0" layoutY="13.0" prefHeight="184.0" prefWidth="227.0" style="-fx-background-color: #313133; -fx-background-radius: 15;">
+                                       <children>
+                                          <Label layoutX="82.0" layoutY="71.0" prefHeight="26.0" prefWidth="134.0" text="Number of Items" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="52.0" fitWidth="51.0" layoutX="14.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../images/car-parts.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="NumberOfItems" alignment="CENTER" layoutX="47.0" layoutY="113.0" prefHeight="26.0" prefWidth="142.0" text="0" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane fx:id="AddEmployeeAnchor" layoutX="344.0" layoutY="178.0" prefHeight="551.2" prefWidth="888.8" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="10.0" layoutY="12.0" prefHeight="527.0" prefWidth="868.0" style="-fx-background-radius: 15; -fx-background-color: #272727;">
+                                 <children>
+                                    <AnchorPane layoutX="204.0" layoutY="7.0" prefHeight="510.0" prefWidth="474.0" style="-fx-background-color: #87878a; -fx-background-radius: 15;">
+                                       <children>
+                                          <Label layoutX="10.0" layoutY="60.0" prefHeight="23.0" prefWidth="110.0" text="User id:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="UserIDField" layoutX="158.0" layoutY="58.0" prefHeight="26.0" prefWidth="223.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="10.0" layoutY="130.0" prefHeight="22.0" prefWidth="98.0" text="First Name:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="FirstNameField" layoutX="156.0" layoutY="128.0" prefHeight="26.0" prefWidth="223.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="Country" layoutX="135.0" layoutY="417.0" prefHeight="26.0" prefWidth="70.0" promptText="Country" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="9.0" layoutY="160.0" prefHeight="31.0" prefWidth="105.0" text="Middle Name:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="201.0" prefHeight="23.0" prefWidth="85.0" text="Last Name:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="237.0" prefHeight="23.0" prefWidth="71.0" text="Email:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="310.0" prefHeight="23.0" prefWidth="71.0" text="Phone:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="419.0" prefHeight="23.0" prefWidth="71.0" text="Address:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="City" layoutX="211.0" layoutY="417.0" prefHeight="26.0" prefWidth="70.0" promptText="City" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="Street" layoutX="286.0" layoutY="417.0" prefHeight="26.0" prefWidth="70.0" promptText="Street" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="ZipCode" layoutX="362.0" layoutY="417.0" prefHeight="26.0" prefWidth="70.0" promptText="Zip Code" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="9.0" layoutY="277.0" text="Gender:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <RadioButton fx:id="Male" layoutX="156.0" layoutY="277.0" mnemonicParsing="false" text="Male">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="Female" layoutX="308.0" layoutY="277.0" mnemonicParsing="false" text="Female">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <Button fx:id="SaveEmployee" layoutX="137.0" layoutY="457.0" mnemonicParsing="false" onAction="#SaveEmployeeButton" prefHeight="30.0" prefWidth="219.0" style="-fx-background-radius: 15; -fx-background-color: #313133;" text="Save Employee" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="116.0" layoutY="12.0" prefHeight="33.0" prefWidth="226.0" text="Add Employee">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="LastNameField" layoutX="156.0" layoutY="199.0" prefHeight="26.0" prefWidth="223.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="MiddleNameField" layoutX="156.0" layoutY="162.0" prefHeight="26.0" prefWidth="223.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="EmailField" layoutX="156.0" layoutY="237.0" prefHeight="26.0" prefWidth="223.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="PhoneField" layoutX="156.0" layoutY="306.0" prefHeight="26.0" prefWidth="223.0" style="-fx-background-radius: 15;" />
+                                          <DatePicker fx:id="Birthdate" layoutX="158.0" layoutY="342.0" prefHeight="26.0" prefWidth="220.0" />
+                                          <Label layoutX="9.0" layoutY="343.0" prefHeight="23.0" prefWidth="87.0" text="Birth Date:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="Salary" layoutX="158.0" layoutY="380.0" prefHeight="26.0" prefWidth="223.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="10.0" layoutY="382.0" prefHeight="23.0" prefWidth="87.0" text="Salary:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="96.0" prefHeight="23.0" prefWidth="110.0" text="Employee id:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="EmployeeIDField" layoutX="156.0" layoutY="94.0" prefHeight="26.0" prefWidth="223.0" style="-fx-background-radius: 15;" />
+                                       </children>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </AnchorPane>
+                                 </children>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="ViewEmployeeAnchor" layoutX="345.0" layoutY="176.0" prefHeight="551.2" prefWidth="888.8" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="526.0" prefWidth="854.0" style="-fx-background-color: #272727; -fx-background-radius: 15;">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <children>
+                                    <ComboBox layoutX="26.0" layoutY="21.0" prefHeight="26.0" prefWidth="218.0" promptText="Choose Your Method Of Search" style="-fx-background-radius: 15; -fx-background-color: #87878a;">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ComboBox>
+                                    <TextField alignment="TOP_CENTER" layoutX="262.0" layoutY="21.0" prefHeight="26.0" prefWidth="283.0" promptText="Type What you're Looking" style="-fx-background-radius: 15;" />
+                                    <Button layoutX="583.0" layoutY="22.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="Search">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Button>
+                                    <Button layoutX="683.0" layoutY="22.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="View All">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Button>
+                                    <AnchorPane layoutX="9.0" layoutY="58.0" prefHeight="264.0" prefWidth="838.0" style="-fx-background-radius: 15; -fx-background-color: #000000;">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <children>
+                                          <TableView layoutX="12.0" layoutY="15.0" prefHeight="234.0" prefWidth="810.0">
+                                             <columns>
+                                                <TableColumn prefWidth="73.5999641418457" text="EmployeeID" />
+                                                <TableColumn prefWidth="71.99996948242188" text="FirstName" />
+                                                <TableColumn prefWidth="82.40000915527344" text="MiddleName" />
+                                                <TableColumn prefWidth="68.0" text="LastName" />
+                                                <TableColumn prefWidth="57.5999755859375" text="Gender" />
+                                                <TableColumn prefWidth="55.20001220703125" text="Email" />
+                                                <TableColumn prefWidth="55.199951171875" text="Phone" />
+                                                <TableColumn prefWidth="60.0" text="Country" />
+                                                <TableColumn prefWidth="48.0" text="City" />
+                                                <TableColumn prefWidth="50.4000244140625" text="street" />
+                                                <TableColumn prefWidth="61.60009765625" text="Zip code" />
+                                                <TableColumn prefWidth="60.800048828125" text="BirthDate" />
+                                                <TableColumn prefWidth="60.79996337890623" text="Salary" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="9.0" layoutY="344.0" prefHeight="167.0" prefWidth="838.0" style="-fx-background-radius: 15; -fx-background-color: #000000;">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <children>
+                                          <Label layoutX="11.0" layoutY="15.0" prefHeight="23.0" prefWidth="85.0" text="Employee id:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="112.0" layoutY="14.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="11.0" layoutY="51.0" prefHeight="23.0" prefWidth="85.0" text="First Name: " textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="112.0" layoutY="49.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="5.0" layoutY="84.0" prefHeight="23.0" prefWidth="97.0" text="Middle Name:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="112.0" layoutY="83.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="11.0" layoutY="118.0" prefHeight="23.0" prefWidth="85.0" text="Last Name:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="112.0" layoutY="116.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="496.0" layoutY="117.0" prefHeight="23.0" prefWidth="57.0" text="Gender:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="336.0" layoutY="14.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="271.0" layoutY="50.0" prefHeight="23.0" prefWidth="50.0" text="Email:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="336.0" layoutY="49.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="269.0" layoutY="84.0" prefHeight="23.0" prefWidth="54.0" text="Phone:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="336.0" layoutY="82.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="495.0" layoutY="15.0" prefHeight="23.0" prefWidth="59.0" text="Country:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="336.0" layoutY="115.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="496.0" layoutY="49.0" prefHeight="23.0" prefWidth="34.0" text="City: " textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="570.0" layoutY="14.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="497.0" layoutY="84.0" prefHeight="23.0" prefWidth="46.0" text="Street:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="570.0" layoutY="48.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="269.0" layoutY="15.0" prefHeight="23.0" prefWidth="69.0" text="BirthDate:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="570.0" layoutY="81.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="273.0" layoutY="118.0" prefHeight="23.0" prefWidth="45.0" text="Salary:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="741.0" layoutY="14.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" style="-fx-background-radius: 15; -fx-background-color: #641c9e;" text="Clear" textFill="WHITE">
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="741.0" layoutY="62.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" style="-fx-background-radius: 15; -fx-background-color: #c91717;" text="Delete" textFill="WHITE">
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="741.0" layoutY="110.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" style="-fx-background-radius: 15; -fx-background-color: #136e1a;" text="Update" textFill="WHITE">
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                          <ComboBox layoutX="570.0" layoutY="116.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="AddSupplierAnchor" layoutX="344.0" layoutY="176.0" prefHeight="551.2" prefWidth="888.8" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="519.0" prefWidth="857.0" style="-fx-background-color: #272727; -fx-background-radius: 15;">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <children>
+                                    <AnchorPane layoutX="211.0" layoutY="65.0" prefHeight="374.0" prefWidth="452.0" style="-fx-background-color: #000000; -fx-background-radius: 15;">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <children>
+                                          <Label layoutX="130.0" layoutY="26.0" prefHeight="46.0" prefWidth="187.0" text="Add Supplier" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="16.0" layoutY="105.0" prefHeight="18.0" prefWidth="85.0" text="Supplier ID:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="IDSupplierField" layoutX="134.0" layoutY="103.0" prefHeight="26.0" prefWidth="231.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="16.0" layoutY="149.0" prefHeight="22.0" prefWidth="117.0" text="Supplier Name:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="SupplierNameField" layoutX="134.0" layoutY="147.0" prefHeight="26.0" prefWidth="231.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="16.0" layoutY="192.0" prefHeight="22.0" prefWidth="73.0" text="Phone:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="PhoneSupplierField" layoutX="134.0" layoutY="189.0" prefHeight="26.0" prefWidth="231.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="16.0" layoutY="231.0" prefHeight="22.0" prefWidth="73.0" text="Email:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="SaveSupplier" layoutX="90.0" layoutY="328.0" mnemonicParsing="false" onAction="#SaveSupplierButton" prefHeight="31.0" prefWidth="268.0" style="-fx-background-color: #87878a; -fx-background-radius: 15;" text="Save Supplier" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="16.0" layoutY="281.0" prefHeight="22.0" prefWidth="73.0" text="Address:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="EmailSupplierField" layoutX="134.0" layoutY="229.0" prefHeight="26.0" prefWidth="231.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="CityField" layoutX="191.0" layoutY="279.0" prefHeight="26.0" prefWidth="66.0" promptText="City" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="CountryField" layoutX="113.0" layoutY="279.0" prefHeight="26.0" prefWidth="66.0" promptText="Country" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="StreetField" layoutX="272.0" layoutY="279.0" prefHeight="26.0" prefWidth="66.0" promptText="Street" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="ZipCodeFIeld" layoutX="348.0" layoutY="279.0" prefHeight="26.0" prefWidth="66.0" promptText="Zip code" style="-fx-background-radius: 15;" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="ViewSupplierAnchor" layoutX="14.0" layoutY="14.0" prefHeight="551.2" prefWidth="888.8" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="17.0" layoutY="12.0" prefHeight="526.0" prefWidth="854.0" style="-fx-background-color: #272727; -fx-background-radius: 15;">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <children>
+                                    <ComboBox layoutX="26.0" layoutY="14.0" prefHeight="26.0" prefWidth="218.0" promptText="Choose Your Method Of Search" style="-fx-background-radius: 15; -fx-background-color: #87878a;">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ComboBox>
+                                    <TextField alignment="TOP_CENTER" layoutX="261.0" layoutY="14.0" prefHeight="26.0" prefWidth="283.0" promptText="Type What you're Looking" style="-fx-background-radius: 15;" />
+                                    <Button layoutX="581.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="Search">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Button>
+                                    <Button layoutX="672.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="View All">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Button>
+                                    <AnchorPane layoutX="9.0" layoutY="58.0" prefHeight="264.0" prefWidth="838.0" style="-fx-background-radius: 15; -fx-background-color: #000000;">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <children>
+                                          <TableView layoutX="12.0" layoutY="15.0" prefHeight="234.0" prefWidth="810.0">
+                                             <columns>
+                                                <TableColumn prefWidth="92.79999160766602" text="SupplierID" />
+                                                <TableColumn prefWidth="84.79998779296875" text="Name" />
+                                                <TableColumn prefWidth="84.80003356933594" text="Gender" />
+                                                <TableColumn prefWidth="76.79998779296875" text="Email" />
+                                                <TableColumn prefWidth="94.39996337890625" text="Phone" />
+                                                <TableColumn prefWidth="92.79998779296875" text="Country" />
+                                                <TableColumn prefWidth="96.0" text="City" />
+                                                <TableColumn prefWidth="100.00006103515625" text="street" />
+                                                <TableColumn prefWidth="96.800048828125" text="Zip code" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="9.0" layoutY="344.0" prefHeight="167.0" prefWidth="838.0" style="-fx-background-radius: 15; -fx-background-color: #000000;">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <children>
+                                          <Label layoutX="11.0" layoutY="26.0" prefHeight="23.0" prefWidth="85.0" text="Supplier id:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="97.0" layoutY="24.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="11.0" layoutY="72.0" prefHeight="23.0" prefWidth="85.0" text="Name: " textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="97.0" layoutY="71.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="503.0" layoutY="26.0" prefHeight="23.0" prefWidth="57.0" text="Gender:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="270.0" layoutY="25.0" prefHeight="23.0" prefWidth="50.0" text="Email:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="336.0" layoutY="24.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="268.0" layoutY="72.0" prefHeight="23.0" prefWidth="54.0" text="Phone:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="336.0" layoutY="71.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <TextField layoutX="97.0" layoutY="116.0" prefHeight="26.0" prefWidth="114.0" promptText="Country" style="-fx-background-radius: 15;" />
+                                          <Button layoutX="741.0" layoutY="14.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" style="-fx-background-radius: 15; -fx-background-color: #641c9e;" text="Clear" textFill="WHITE">
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="741.0" layoutY="62.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" style="-fx-background-radius: 15; -fx-background-color: #c91717;" text="Delete" textFill="WHITE">
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="741.0" layoutY="110.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" style="-fx-background-radius: 15; -fx-background-color: #136e1a;" text="Update" textFill="WHITE">
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                          <ComboBox layoutX="575.0" layoutY="25.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="11.0" layoutY="117.0" prefHeight="23.0" prefWidth="70.0" text="Address:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="238.0" layoutY="116.0" prefHeight="26.0" prefWidth="114.0" promptText="City" style="-fx-background-radius: 15;" />
+                                          <TextField layoutX="371.0" layoutY="116.0" prefHeight="26.0" prefWidth="114.0" promptText="Street" style="-fx-background-radius: 15;" />
+                                          <TextField layoutX="503.0" layoutY="115.0" prefHeight="26.0" prefWidth="114.0" promptText="Zip code" style="-fx-background-radius: 15;" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="AddItemAnchor" layoutX="14.0" layoutY="14.0" prefHeight="551.2" prefWidth="888.8" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="522.0" prefWidth="858.0" style="-fx-background-color: #272727; -fx-background-radius: 15;">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <children>
+                                    <AnchorPane layoutX="186.0" layoutY="47.0" prefHeight="422.0" prefWidth="471.0" style="-fx-background-color: #000000; -fx-background-radius: 15;">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <children>
+                                          <Label alignment="CENTER" layoutX="158.0" layoutY="14.0" prefHeight="46.0" prefWidth="156.0" text="Add Item" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="54.0" layoutY="83.0" prefHeight="22.0" prefWidth="70.0" text="Item ID:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="ItemIDField" layoutX="151.0" layoutY="81.0" prefHeight="26.0" prefWidth="222.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="54.0" layoutY="129.0" prefHeight="22.0" prefWidth="83.0" text="Item Name:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="ItemNameFIeld" layoutX="151.0" layoutY="127.0" prefHeight="26.0" prefWidth="222.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="54.0" layoutY="260.0" prefHeight="22.0" prefWidth="83.0" text="Price:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="ModelField" layoutX="151.0" layoutY="171.0" prefHeight="26.0" prefWidth="222.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="54.0" layoutY="173.0" prefHeight="22.0" prefWidth="83.0" text="Model:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="QuantityField" layoutX="151.0" layoutY="212.0" prefHeight="26.0" prefWidth="222.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="54.0" layoutY="214.0" prefHeight="22.0" prefWidth="83.0" text="Quantity:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="PriceField" layoutX="151.0" layoutY="258.0" prefHeight="26.0" prefWidth="222.0" style="-fx-background-radius: 15;" />
+                                          <Button fx:id="SaveItem" layoutX="110.0" layoutY="355.0" mnemonicParsing="false" onAction="#SaveItemButton" prefHeight="26.0" prefWidth="250.0" style="-fx-background-color: #87878a; -fx-background-radius: 15;" text="Save Item">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="54.0" layoutY="304.0" prefHeight="22.0" prefWidth="83.0" text="Supplier ID:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="SupplierIDField" layoutX="151.0" layoutY="302.0" prefHeight="26.0" prefWidth="222.0" style="-fx-background-radius: 15;" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="ViewItemAnchor" layoutX="336.0" layoutY="158.0" prefHeight="551.2" prefWidth="888.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="17.0" layoutY="12.0" prefHeight="526.0" prefWidth="854.0" style="-fx-background-color: #272727; -fx-background-radius: 15;">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <children>
+                                    <ComboBox layoutX="26.0" layoutY="14.0" prefHeight="26.0" prefWidth="218.0" promptText="Choose Your Method Of Search" style="-fx-background-radius: 15; -fx-background-color: #87878a;">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ComboBox>
+                                    <TextField alignment="TOP_CENTER" layoutX="261.0" layoutY="14.0" prefHeight="26.0" prefWidth="283.0" promptText="Type What you're Looking" style="-fx-background-radius: 15;" />
+                                    <Button layoutX="581.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="Search">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Button>
+                                    <Button layoutX="672.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="View All">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Button>
+                                    <AnchorPane layoutX="49.0" layoutY="58.0" prefHeight="264.0" prefWidth="778.0" style="-fx-background-radius: 15; -fx-background-color: #000000;">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <children>
+                                          <TableView layoutX="52.0" layoutY="15.0" prefHeight="234.0" prefWidth="673.0">
+                                             <columns>
+                                                <TableColumn prefWidth="92.79999160766602" text="Item ID" />
+                                                <TableColumn prefWidth="127.2000732421875" text="Item Name" />
+                                                <TableColumn prefWidth="105.59991455078125" text="Model" />
+                                                <TableColumn prefWidth="125.60003662109375" text="Stock Quantity" />
+                                                <TableColumn prefWidth="114.39996337890625" text="Price" />
+                                                <TableColumn prefWidth="108.00006103515625" text="Supplier ID" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="8.0" layoutY="344.0" prefHeight="167.0" prefWidth="838.0" style="-fx-background-radius: 15; -fx-background-color: #000000;">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="26.0" prefHeight="23.0" prefWidth="85.0" text="Item ID:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="112.0" layoutY="25.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="14.0" layoutY="69.0" prefHeight="23.0" prefWidth="85.0" text="Item Name: " textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="112.0" layoutY="67.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <TextField layoutX="112.0" layoutY="114.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="282.0" layoutY="26.0" prefHeight="23.0" prefWidth="108.0" text="Stock Quantity:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="399.0" layoutY="25.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="282.0" layoutY="68.0" prefHeight="23.0" prefWidth="54.0" text="Price:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="399.0" layoutY="67.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <TextField layoutX="399.0" layoutY="114.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="14.0" layoutY="118.0" prefHeight="23.0" prefWidth="62.0" text="Model:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="282.0" layoutY="118.0" prefHeight="23.0" prefWidth="92.0" text="Supplier ID:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="608.0" layoutY="18.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="162.0" style="-fx-background-radius: 15; -fx-background-color: #641c9e;" text="Clear" textFill="WHITE">
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="608.0" layoutY="64.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="162.0" style="-fx-background-radius: 15; -fx-background-color: #c91717;" text="Delete" textFill="WHITE">
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="608.0" layoutY="110.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="162.0" style="-fx-background-radius: 15; -fx-background-color: #136e1a;" text="Update" textFill="WHITE">
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="AddAdminAnchor" layoutX="345.0" layoutY="178.0" prefHeight="551.2" prefWidth="888.8" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="10.0" layoutY="12.0" prefHeight="527.0" prefWidth="868.0" style="-fx-background-radius: 15; -fx-background-color: #272727;">
+                                 <children>
+                                    <AnchorPane layoutX="204.0" layoutY="7.0" prefHeight="510.0" prefWidth="474.0" style="-fx-background-color: #87878a; -fx-background-radius: 15;">
+                                       <children>
+                                          <Label layoutX="10.0" layoutY="60.0" prefHeight="23.0" prefWidth="110.0" text="User id:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="UserIDAdminField" layoutX="158.0" layoutY="58.0" prefHeight="26.0" prefWidth="223.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="10.0" layoutY="130.0" prefHeight="22.0" prefWidth="98.0" text="First Name:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="FirstNameAdminField" layoutX="156.0" layoutY="128.0" prefHeight="26.0" prefWidth="223.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="CountryAdmin" layoutX="135.0" layoutY="417.0" prefHeight="26.0" prefWidth="70.0" promptText="Country" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="9.0" layoutY="160.0" prefHeight="31.0" prefWidth="105.0" text="Middle Name:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="201.0" prefHeight="23.0" prefWidth="85.0" text="Last Name:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="237.0" prefHeight="23.0" prefWidth="71.0" text="Email:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="310.0" prefHeight="23.0" prefWidth="71.0" text="Phone:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="419.0" prefHeight="23.0" prefWidth="71.0" text="Address:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="CityAdmin" layoutX="211.0" layoutY="417.0" prefHeight="26.0" prefWidth="70.0" promptText="City" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="StreetAdmin" layoutX="286.0" layoutY="417.0" prefHeight="26.0" prefWidth="70.0" promptText="Street" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="ZipCodeAdmin" layoutX="362.0" layoutY="417.0" prefHeight="26.0" prefWidth="70.0" promptText="Zip Code" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="9.0" layoutY="277.0" text="Gender:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <RadioButton fx:id="MaleAdmin" layoutX="156.0" layoutY="277.0" mnemonicParsing="false" text="Male">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="FemaleAdmin" layoutX="308.0" layoutY="277.0" mnemonicParsing="false" text="Female">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <Button fx:id="SaveEmployee1" layoutX="137.0" layoutY="457.0" mnemonicParsing="false" onAction="#SaveAdminButton" prefHeight="30.0" prefWidth="219.0" style="-fx-background-radius: 15; -fx-background-color: #313133;" text="Save Admin" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="116.0" layoutY="12.0" prefHeight="33.0" prefWidth="226.0" text="Add Admin">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="LastNameAdminField" layoutX="156.0" layoutY="199.0" prefHeight="26.0" prefWidth="223.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="MiddleNameAdminField" layoutX="156.0" layoutY="162.0" prefHeight="26.0" prefWidth="223.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="EmailAdminField" layoutX="156.0" layoutY="237.0" prefHeight="26.0" prefWidth="223.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="PhoneAdminField" layoutX="156.0" layoutY="306.0" prefHeight="26.0" prefWidth="223.0" style="-fx-background-radius: 15;" />
+                                          <DatePicker fx:id="BirthdateAdmin" layoutX="158.0" layoutY="342.0" prefHeight="26.0" prefWidth="220.0" />
+                                          <Label layoutX="9.0" layoutY="343.0" prefHeight="23.0" prefWidth="87.0" text="Birth Date:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="SalaryAdmin" layoutX="158.0" layoutY="380.0" prefHeight="26.0" prefWidth="223.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="10.0" layoutY="382.0" prefHeight="23.0" prefWidth="87.0" text="Salary:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="96.0" prefHeight="23.0" prefWidth="110.0" text="Admin id:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="AdminIDField" layoutX="156.0" layoutY="94.0" prefHeight="26.0" prefWidth="223.0" style="-fx-background-radius: 15;" />
+                                       </children>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </AnchorPane>
+                                 </children>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

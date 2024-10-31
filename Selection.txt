@@ -1,0 +1,11 @@
+select * from users;
+
+select * from customer;
+
+select * from employee;
+
+select * from "Order";
+
+select * from item;
+
+select * from supplier;

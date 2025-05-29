@@ -2,10 +2,16 @@ package org.example.rlproject;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import javax.swing.*;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -76,6 +82,8 @@ public class ForgetPasswordController {
                     updateStmt.executeUpdate();
 
                     showMessage("Success", "Password changed successfully.", JOptionPane.INFORMATION_MESSAGE);
+                    loadWelcomePage(event);
+
                 }
             } else {
                 showMessage("Error", "User ID and email do not match.", JOptionPane.ERROR_MESSAGE);
@@ -88,6 +96,21 @@ public class ForgetPasswordController {
 
     private void showMessage(String title, String message, int messageType) {
         JOptionPane.showMessageDialog(null, message, title, messageType);
+    }
+
+    private void loadWelcomePage(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Welcome.fxml"));
+            Parent root = loader.load();
+
+            // Assuming the current stage is retrieved from the event source
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Error loading Welcome page: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 }
 

@@ -2,12 +2,18 @@ package org.example.rlproject;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import javax.swing.*;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -84,6 +90,7 @@ public class SignUpController {
 
                 stmt.executeUpdate();
                 JOptionPane.showMessageDialog(null, "User registered successfully!");
+                loadWelcomePage(event);
             } catch (SQLException e) {
                 JOptionPane.showMessageDialog(null, "Database error: " + e.getMessage());
                 e.printStackTrace();
@@ -112,6 +119,21 @@ public class SignUpController {
             JOptionPane.showMessageDialog(null, "Error checking UserId uniqueness: " + e.getMessage());
         }
         return false;
+    }
+
+    private void loadWelcomePage(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Welcome.fxml"));
+            Parent root = loader.load();
+
+            // Assuming the current stage is retrieved from the event source
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Error loading Welcome page: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 }
 

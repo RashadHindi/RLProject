@@ -46,50 +46,10 @@ public class WelcomeController {
             JOptionPane.showMessageDialog(null, "Unable to load page: " + e.getMessage());
         }
     }
+
     @FXML
     void SignInButton(ActionEvent event) {
-        /*
-        String username = UsernameField.getText();
-        String password = PasswordField.getText();
 
-        if (username.isEmpty() || password.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Username or password cannot be empty.");
-            return;
-        }
-
-        String sql = "SELECT role FROM users WHERE user_name = ? AND password = ?";
-
-        try (Connection con = DatabaseConnectionManager.getConnection();
-             PreparedStatement stmt = con.prepareStatement(sql)) {
-
-            stmt.setString(1, username);
-            stmt.setString(2, password);
-
-            ResultSet rs = stmt.executeQuery();
-
-            if (rs.next()) {
-                String userName = rs.getString("user_name");
-                String role = rs.getString("role");
-
-                if ("Employee".equalsIgnoreCase(role)) {
-                    loadPage("Employee Page.fxml");
-                } else if ("Admin".equalsIgnoreCase(role)) {
-
-                    //loadPage("Admin Page.fxml");
-                    AdminController adminController = new FXMLLoader(getClass().getResource("Admin Page.fxml")).getController();
-                    adminController.setAdminUsername(userName);
-                } else {
-                    JOptionPane.showMessageDialog(null, "Invalid role.");
-                }
-            } else {
-                // Show error if username or password is incorrect
-                JOptionPane.showMessageDialog(null, "Invalid username or password.");
-            }
-
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "Database error: " + e.getMessage());
-            e.printStackTrace();
-        }*/
         String username = UsernameField.getText();
         String password = PasswordField.getText();
 
@@ -121,7 +81,14 @@ public class WelcomeController {
                 String role = rs.getString("role");
 
                 if ("Employee".equalsIgnoreCase(role)) {
-                    loadPage("Employee Page.fxml");
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("EmployeePage.fxml"));
+                    Stage stage = (Stage) SignIn.getScene().getWindow();
+                    Scene scene = new Scene(loader.load());
+                    stage.setScene(scene);
+
+                    EmployeeController EmployeeController = loader.getController();
+                    EmployeeController.setEmployeeUsername(userName);
+
                 } else if ("Admin".equalsIgnoreCase(role)) {
                     // Load Admin Page
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("Admin Page.fxml"));
@@ -130,7 +97,7 @@ public class WelcomeController {
                     stage.setScene(scene);
 
                     AdminController adminController = loader.getController();
-                    adminController.setAdminUsername(userName); // Set the username in AdminController
+                    adminController.setAdminUsername(userName);
                 } else {
                     JOptionPane.showMessageDialog(null, "Invalid role.");
                 }

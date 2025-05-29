@@ -137,7 +137,7 @@
                                     <DropShadow />
                                  </effect>
                               </Button>
-                              <Button fx:id="Home1" layoutX="16.0" layoutY="207.0" mnemonicParsing="false" onAction="#HomeButton" prefHeight="26.0" prefWidth="180.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="Add Admin" textFill="WHITE">
+                              <Button fx:id="AddAdmin" layoutX="16.0" layoutY="207.0" mnemonicParsing="false" onAction="#AddAdminButton" prefHeight="26.0" prefWidth="180.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="Add Admin" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -289,7 +289,7 @@
                                                 <Font name="System Bold" size="15.0" />
                                              </font>
                                           </Label>
-                                          <TextField fx:id="UserIDField" layoutX="158.0" layoutY="58.0" prefHeight="26.0" prefWidth="223.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="UserIDField" layoutX="156.0" layoutY="58.0" prefHeight="26.0" prefWidth="223.0" style="-fx-background-radius: 15;" />
                                           <Label layoutX="10.0" layoutY="130.0" prefHeight="22.0" prefWidth="98.0" text="First Name:">
                                              <font>
                                                 <Font name="System Bold" size="15.0" />
@@ -391,18 +391,18 @@
                                     <DropShadow />
                                  </effect>
                                  <children>
-                                    <ComboBox layoutX="26.0" layoutY="21.0" prefHeight="26.0" prefWidth="218.0" promptText="Choose Your Method Of Search" style="-fx-background-radius: 15; -fx-background-color: #87878a;">
+                                    <ComboBox fx:id="EmployeeSearchList" layoutX="26.0" layoutY="21.0" prefHeight="26.0" prefWidth="218.0" promptText="Choose Your Method Of Search" style="-fx-background-radius: 15; -fx-background-color: #87878a;">
                                        <effect>
                                           <DropShadow />
                                        </effect>
                                     </ComboBox>
-                                    <TextField alignment="TOP_CENTER" layoutX="262.0" layoutY="21.0" prefHeight="26.0" prefWidth="283.0" promptText="Type What you're Looking" style="-fx-background-radius: 15;" />
-                                    <Button layoutX="583.0" layoutY="22.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="Search">
+                                    <TextField fx:id="EmployeeSearchBar" alignment="TOP_CENTER" layoutX="262.0" layoutY="21.0" prefHeight="26.0" prefWidth="283.0" promptText="Type What you're Looking" style="-fx-background-radius: 15;" />
+                                    <Button fx:id="SearchEmployee" layoutX="583.0" layoutY="22.0" mnemonicParsing="false" onAction="#SearchEmployeeButton" prefHeight="26.0" prefWidth="72.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="Search">
                                        <effect>
                                           <DropShadow />
                                        </effect>
                                     </Button>
-                                    <Button layoutX="683.0" layoutY="22.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="View All">
+                                    <Button fx:id="ViewAllEmployee" layoutX="683.0" layoutY="22.0" mnemonicParsing="false" onAction="#ViewAllEmployeeButton" prefHeight="26.0" prefWidth="72.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="View All">
                                        <effect>
                                           <DropShadow />
                                        </effect>
@@ -412,21 +412,21 @@
                                           <DropShadow />
                                        </effect>
                                        <children>
-                                          <TableView layoutX="12.0" layoutY="15.0" prefHeight="234.0" prefWidth="810.0">
+                                          <TableView fx:id="EmployeeTable" layoutX="12.0" layoutY="15.0" prefHeight="234.0" prefWidth="810.0">
                                              <columns>
-                                                <TableColumn prefWidth="73.5999641418457" text="EmployeeID" />
-                                                <TableColumn prefWidth="71.99996948242188" text="FirstName" />
-                                                <TableColumn prefWidth="82.40000915527344" text="MiddleName" />
-                                                <TableColumn prefWidth="68.0" text="LastName" />
-                                                <TableColumn prefWidth="57.5999755859375" text="Gender" />
-                                                <TableColumn prefWidth="55.20001220703125" text="Email" />
-                                                <TableColumn prefWidth="55.199951171875" text="Phone" />
-                                                <TableColumn prefWidth="60.0" text="Country" />
-                                                <TableColumn prefWidth="48.0" text="City" />
-                                                <TableColumn prefWidth="50.4000244140625" text="street" />
-                                                <TableColumn prefWidth="61.60009765625" text="Zip code" />
-                                                <TableColumn prefWidth="60.800048828125" text="BirthDate" />
-                                                <TableColumn prefWidth="60.79996337890623" text="Salary" />
+                                                <TableColumn fx:id="ViewEmployeeIDColumn" prefWidth="73.5999641418457" text="EmployeeID" />
+                                                <TableColumn fx:id="ViewEmployeeFNameColumn" prefWidth="71.99996948242188" text="FirstName" />
+                                                <TableColumn fx:id="ViewEmployeeMNameColumn" prefWidth="82.40000915527344" text="MiddleName" />
+                                                <TableColumn fx:id="ViewEmployeeLNameColumn" prefWidth="68.0" text="LastName" />
+                                                <TableColumn fx:id="ViewEmployeeGenderColumn" prefWidth="57.5999755859375" text="Gender" />
+                                                <TableColumn fx:id="ViewEmployeeEmailColumn" prefWidth="55.20001220703125" text="Email" />
+                                                <TableColumn fx:id="ViewPEmployeePhoneColumn" prefWidth="55.199951171875" text="Phone" />
+                                                <TableColumn fx:id="ViewEmployeeCountryColumn" prefWidth="60.0" text="Country" />
+                                                <TableColumn fx:id="ViewEmployeeCityColumn" prefWidth="48.0" text="City" />
+                                                <TableColumn fx:id="ViewEmployeeStreetColumn" prefWidth="50.4000244140625" text="street" />
+                                                <TableColumn fx:id="ViewEmployeeZipCodeColumn" prefWidth="61.60009765625" text="Zip code" />
+                                                <TableColumn fx:id="ViewEmployeeBirthDateColumn" prefWidth="60.800048828125" text="BirthDate" />
+                                                <TableColumn fx:id="ViewEmployeeSalaryColumn" prefWidth="60.79996337890623" text="Salary" />
                                              </columns>
                                           </TableView>
                                        </children>
@@ -441,73 +441,63 @@
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
                                           </Label>
-                                          <TextField layoutX="112.0" layoutY="14.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="EmployeeIDSearch" layoutX="112.0" layoutY="14.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
                                           <Label layoutX="11.0" layoutY="51.0" prefHeight="23.0" prefWidth="85.0" text="First Name: " textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
                                           </Label>
-                                          <TextField layoutX="112.0" layoutY="49.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="EmployeeFirstNameSearch" layoutX="112.0" layoutY="49.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
                                           <Label layoutX="5.0" layoutY="84.0" prefHeight="23.0" prefWidth="97.0" text="Middle Name:" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
                                           </Label>
-                                          <TextField layoutX="112.0" layoutY="83.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="EmployeeMiddleNameSearch" layoutX="112.0" layoutY="83.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
                                           <Label layoutX="11.0" layoutY="118.0" prefHeight="23.0" prefWidth="85.0" text="Last Name:" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
                                           </Label>
-                                          <TextField layoutX="112.0" layoutY="116.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
-                                          <Label layoutX="496.0" layoutY="117.0" prefHeight="23.0" prefWidth="57.0" text="Gender:" textFill="WHITE">
+                                          <TextField fx:id="EmployeeLastNameSearch" layoutX="112.0" layoutY="116.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="496.0" layoutY="95.0" prefHeight="23.0" prefWidth="57.0" text="Gender:" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
                                           </Label>
-                                          <TextField layoutX="336.0" layoutY="14.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="EmployeeBirthDateSearch" layoutX="336.0" layoutY="14.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
                                           <Label layoutX="271.0" layoutY="50.0" prefHeight="23.0" prefWidth="50.0" text="Email:" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
                                           </Label>
-                                          <TextField layoutX="336.0" layoutY="49.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="EmployeeEmailSearch" layoutX="336.0" layoutY="49.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
                                           <Label layoutX="269.0" layoutY="84.0" prefHeight="23.0" prefWidth="54.0" text="Phone:" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
                                           </Label>
-                                          <TextField layoutX="336.0" layoutY="82.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
-                                          <Label layoutX="495.0" layoutY="15.0" prefHeight="23.0" prefWidth="59.0" text="Country:" textFill="WHITE">
+                                          <TextField fx:id="EmployeePhoneSearch" layoutX="336.0" layoutY="82.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="495.0" layoutY="15.0" prefHeight="23.0" prefWidth="59.0" text="Address:" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
                                           </Label>
-                                          <TextField layoutX="336.0" layoutY="115.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
-                                          <Label layoutX="496.0" layoutY="49.0" prefHeight="23.0" prefWidth="34.0" text="City: " textFill="WHITE">
-                                             <font>
-                                                <Font name="System Bold" size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <TextField layoutX="570.0" layoutY="14.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
-                                          <Label layoutX="497.0" layoutY="84.0" prefHeight="23.0" prefWidth="46.0" text="Street:" textFill="WHITE">
-                                             <font>
-                                                <Font name="System Bold" size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <TextField layoutX="570.0" layoutY="48.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="EmployeeSalarySearch" layoutX="336.0" layoutY="115.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="EmployeeCountrySearch" layoutX="554.0" layoutY="13.0" prefHeight="26.0" prefWidth="61.0" promptText="Country" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="EmployeeCitySearch" layoutX="625.0" layoutY="13.0" prefHeight="26.0" prefWidth="66.0" promptText="City" style="-fx-background-radius: 15;" />
                                           <Label layoutX="269.0" layoutY="15.0" prefHeight="23.0" prefWidth="69.0" text="BirthDate:" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
                                           </Label>
-                                          <TextField layoutX="570.0" layoutY="81.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="EmployeeStreetSearch" layoutX="553.0" layoutY="49.0" prefHeight="26.0" prefWidth="62.0" promptText="Street" style="-fx-background-radius: 15;" />
                                           <Label layoutX="273.0" layoutY="118.0" prefHeight="23.0" prefWidth="45.0" text="Salary:" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
                                           </Label>
-                                          <Button layoutX="741.0" layoutY="14.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" style="-fx-background-radius: 15; -fx-background-color: #641c9e;" text="Clear" textFill="WHITE">
+                                          <Button fx:id="ClearEmployeeSearch" layoutX="741.0" layoutY="14.0" mnemonicParsing="false" onAction="#ClearEmployeeSearchButton" prefHeight="38.0" prefWidth="80.0" style="-fx-background-radius: 15; -fx-background-color: #641c9e;" text="Clear" textFill="WHITE">
                                              <effect>
                                                 <DropShadow />
                                              </effect>
@@ -515,7 +505,7 @@
                                                 <Font name="System Bold" size="13.0" />
                                              </font>
                                           </Button>
-                                          <Button layoutX="741.0" layoutY="62.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" style="-fx-background-radius: 15; -fx-background-color: #c91717;" text="Delete" textFill="WHITE">
+                                          <Button fx:id="DeleteEmployeeSearch" layoutX="741.0" layoutY="62.0" mnemonicParsing="false" onAction="#DeleteEmployeeSearchButton" prefHeight="38.0" prefWidth="80.0" style="-fx-background-radius: 15; -fx-background-color: #c91717;" text="Delete" textFill="WHITE">
                                              <effect>
                                                 <DropShadow />
                                              </effect>
@@ -523,7 +513,7 @@
                                                 <Font name="System Bold" size="13.0" />
                                              </font>
                                           </Button>
-                                          <Button layoutX="741.0" layoutY="110.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" style="-fx-background-radius: 15; -fx-background-color: #136e1a;" text="Update" textFill="WHITE">
+                                          <Button fx:id="UpdateEmployeeSearch" layoutX="741.0" layoutY="110.0" mnemonicParsing="false" onAction="#UpdateEmployeeSearchButton" prefHeight="38.0" prefWidth="80.0" style="-fx-background-radius: 15; -fx-background-color: #136e1a;" text="Update" textFill="WHITE">
                                              <effect>
                                                 <DropShadow />
                                              </effect>
@@ -531,7 +521,8 @@
                                                 <Font name="System Bold" size="13.0" />
                                              </font>
                                           </Button>
-                                          <ComboBox layoutX="570.0" layoutY="116.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="EmployeeGenderSearch" layoutX="554.0" layoutY="94.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="EmployeeZipCodeSearch" layoutX="625.0" layoutY="49.0" prefHeight="26.0" prefWidth="66.0" promptText="ZipCode" style="-fx-background-radius: 15;" />
                                        </children>
                                     </AnchorPane>
                                  </children>
@@ -545,7 +536,7 @@
                                     <DropShadow />
                                  </effect>
                                  <children>
-                                    <AnchorPane layoutX="211.0" layoutY="65.0" prefHeight="374.0" prefWidth="452.0" style="-fx-background-color: #000000; -fx-background-radius: 15;">
+                                    <AnchorPane layoutX="211.0" layoutY="65.0" prefHeight="410.0" prefWidth="452.0" style="-fx-background-color: #000000; -fx-background-radius: 15;">
                                        <effect>
                                           <DropShadow />
                                        </effect>
@@ -561,38 +552,44 @@
                                              </font>
                                           </Label>
                                           <TextField fx:id="IDSupplierField" layoutX="134.0" layoutY="103.0" prefHeight="26.0" prefWidth="231.0" style="-fx-background-radius: 15;" />
-                                          <Label layoutX="16.0" layoutY="149.0" prefHeight="22.0" prefWidth="117.0" text="Supplier Name:" textFill="WHITE">
+                                          <Label layoutX="16.0" layoutY="146.0" prefHeight="22.0" prefWidth="99.0" text="First Name:" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="15.0" />
                                              </font>
                                           </Label>
-                                          <TextField fx:id="SupplierNameField" layoutX="134.0" layoutY="147.0" prefHeight="26.0" prefWidth="231.0" style="-fx-background-radius: 15;" />
-                                          <Label layoutX="16.0" layoutY="192.0" prefHeight="22.0" prefWidth="73.0" text="Phone:" textFill="WHITE">
+                                          <TextField fx:id="SupplierFirstNameField" layoutX="134.0" layoutY="143.0" prefHeight="26.0" prefWidth="231.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="14.0" layoutY="222.0" prefHeight="22.0" prefWidth="73.0" text="Phone:" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="15.0" />
                                              </font>
                                           </Label>
-                                          <TextField fx:id="PhoneSupplierField" layoutX="134.0" layoutY="189.0" prefHeight="26.0" prefWidth="231.0" style="-fx-background-radius: 15;" />
-                                          <Label layoutX="16.0" layoutY="231.0" prefHeight="22.0" prefWidth="73.0" text="Email:" textFill="WHITE">
+                                          <TextField fx:id="PhoneSupplierField" layoutX="132.0" layoutY="220.0" prefHeight="26.0" prefWidth="231.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="14.0" layoutY="261.0" prefHeight="22.0" prefWidth="73.0" text="Email:" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="15.0" />
                                              </font>
                                           </Label>
-                                          <Button fx:id="SaveSupplier" layoutX="90.0" layoutY="328.0" mnemonicParsing="false" onAction="#SaveSupplierButton" prefHeight="31.0" prefWidth="268.0" style="-fx-background-color: #87878a; -fx-background-radius: 15;" text="Save Supplier" textFill="WHITE">
+                                          <Button fx:id="SaveSupplier" layoutX="90.0" layoutY="364.0" mnemonicParsing="false" onAction="#SaveSupplierButton" prefHeight="31.0" prefWidth="268.0" style="-fx-background-color: #87878a; -fx-background-radius: 15;" text="Save Supplier" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="15.0" />
                                              </font>
                                           </Button>
-                                          <Label layoutX="16.0" layoutY="281.0" prefHeight="22.0" prefWidth="73.0" text="Address:" textFill="WHITE">
+                                          <Label layoutX="14.0" layoutY="311.0" prefHeight="22.0" prefWidth="73.0" text="Address:" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="15.0" />
                                              </font>
                                           </Label>
-                                          <TextField fx:id="EmailSupplierField" layoutX="134.0" layoutY="229.0" prefHeight="26.0" prefWidth="231.0" style="-fx-background-radius: 15;" />
-                                          <TextField fx:id="CityField" layoutX="191.0" layoutY="279.0" prefHeight="26.0" prefWidth="66.0" promptText="City" style="-fx-background-radius: 15;" />
-                                          <TextField fx:id="CountryField" layoutX="113.0" layoutY="279.0" prefHeight="26.0" prefWidth="66.0" promptText="Country" style="-fx-background-radius: 15;" />
-                                          <TextField fx:id="StreetField" layoutX="272.0" layoutY="279.0" prefHeight="26.0" prefWidth="66.0" promptText="Street" style="-fx-background-radius: 15;" />
-                                          <TextField fx:id="ZipCodeFIeld" layoutX="348.0" layoutY="279.0" prefHeight="26.0" prefWidth="66.0" promptText="Zip code" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="EmailSupplierField" layoutX="132.0" layoutY="259.0" prefHeight="26.0" prefWidth="231.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="CityField" layoutX="189.0" layoutY="309.0" prefHeight="26.0" prefWidth="66.0" promptText="City" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="CountryField" layoutX="111.0" layoutY="309.0" prefHeight="26.0" prefWidth="66.0" promptText="Country" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="StreetField" layoutX="270.0" layoutY="309.0" prefHeight="26.0" prefWidth="66.0" promptText="Street" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="ZipCodeFIeld" layoutX="346.0" layoutY="309.0" prefHeight="26.0" prefWidth="66.0" promptText="Zip code" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="SupplierLastNameField" layoutX="134.0" layoutY="182.0" prefHeight="26.0" prefWidth="231.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="16.0" layoutY="184.0" prefHeight="22.0" prefWidth="99.0" text="Last Name:" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
                                        </children>
                                     </AnchorPane>
                                  </children>
@@ -606,18 +603,18 @@
                                     <DropShadow />
                                  </effect>
                                  <children>
-                                    <ComboBox layoutX="26.0" layoutY="14.0" prefHeight="26.0" prefWidth="218.0" promptText="Choose Your Method Of Search" style="-fx-background-radius: 15; -fx-background-color: #87878a;">
+                                    <ComboBox fx:id="SupplierSearchCombo" layoutX="26.0" layoutY="14.0" prefHeight="26.0" prefWidth="218.0" promptText="Choose Your Method Of Search" style="-fx-background-radius: 15; -fx-background-color: #87878a;">
                                        <effect>
                                           <DropShadow />
                                        </effect>
                                     </ComboBox>
-                                    <TextField alignment="TOP_CENTER" layoutX="261.0" layoutY="14.0" prefHeight="26.0" prefWidth="283.0" promptText="Type What you're Looking" style="-fx-background-radius: 15;" />
-                                    <Button layoutX="581.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="Search">
+                                    <TextField fx:id="SupplierSearchField" alignment="TOP_CENTER" layoutX="261.0" layoutY="14.0" prefHeight="26.0" prefWidth="283.0" promptText="Type What you're Looking" style="-fx-background-radius: 15;" />
+                                    <Button fx:id="SupplierSearch" layoutX="581.0" layoutY="14.0" mnemonicParsing="false" onAction="#SupplierSearchButton" prefHeight="26.0" prefWidth="72.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="Search">
                                        <effect>
                                           <DropShadow />
                                        </effect>
                                     </Button>
-                                    <Button layoutX="672.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="View All">
+                                    <Button fx:id="ViewAllSupplier" layoutX="672.0" layoutY="14.0" mnemonicParsing="false" onAction="#ViewAllSupplierButton" prefHeight="26.0" prefWidth="72.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="View All">
                                        <effect>
                                           <DropShadow />
                                        </effect>
@@ -627,17 +624,17 @@
                                           <DropShadow />
                                        </effect>
                                        <children>
-                                          <TableView layoutX="12.0" layoutY="15.0" prefHeight="234.0" prefWidth="810.0">
+                                          <TableView fx:id="SupplierTableView" layoutX="12.0" layoutY="15.0" prefHeight="234.0" prefWidth="810.0">
                                              <columns>
-                                                <TableColumn prefWidth="92.79999160766602" text="SupplierID" />
-                                                <TableColumn prefWidth="84.79998779296875" text="Name" />
-                                                <TableColumn prefWidth="84.80003356933594" text="Gender" />
-                                                <TableColumn prefWidth="76.79998779296875" text="Email" />
-                                                <TableColumn prefWidth="94.39996337890625" text="Phone" />
-                                                <TableColumn prefWidth="92.79998779296875" text="Country" />
-                                                <TableColumn prefWidth="96.0" text="City" />
-                                                <TableColumn prefWidth="100.00006103515625" text="street" />
-                                                <TableColumn prefWidth="96.800048828125" text="Zip code" />
+                                                <TableColumn fx:id="SupplierIDColumn" prefWidth="92.79999160766602" text="SupplierID" />
+                                                <TableColumn fx:id="SupplierFirstNameColumn" text="First Name" />
+                                                <TableColumn fx:id="SupplierLastNameColumn" prefWidth="96.00004577636719" text="Last Name" />
+                                                <TableColumn fx:id="SupplierPhoneColumn" minWidth="6.4000244140625" prefWidth="85.59991455078125" text="Phone" />
+                                                <TableColumn fx:id="SupplierEmailColumn" prefWidth="79.99993896484375" text="Email" />
+                                                <TableColumn fx:id="SupplierCityColumn" prefWidth="82.4000244140625" text="City" />
+                                                <TableColumn fx:id="SupplierCountryColumn" prefWidth="97.60003662109375" text="Country" />
+                                                <TableColumn fx:id="SupplierStreetColumn" prefWidth="99.199951171875" text="street" />
+                                                <TableColumn fx:id="SupplierZipCodeColumn" prefWidth="101.60003662109375" text="Zip Code" />
                                              </columns>
                                           </TableView>
                                        </children>
@@ -652,32 +649,27 @@
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
                                           </Label>
-                                          <TextField layoutX="97.0" layoutY="24.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
-                                          <Label layoutX="11.0" layoutY="72.0" prefHeight="23.0" prefWidth="85.0" text="Name: " textFill="WHITE">
+                                          <TextField fx:id="SupplierIDSearch" layoutX="97.0" layoutY="24.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="11.0" layoutY="72.0" prefHeight="23.0" prefWidth="85.0" text="First Name: " textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
                                           </Label>
-                                          <TextField layoutX="97.0" layoutY="71.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
-                                          <Label layoutX="503.0" layoutY="26.0" prefHeight="23.0" prefWidth="57.0" text="Gender:" textFill="WHITE">
+                                          <TextField fx:id="SupplierFirstNameSearch" layoutX="97.0" layoutY="71.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="269.0" layoutY="98.0" prefHeight="23.0" prefWidth="50.0" text="Email:" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
                                           </Label>
-                                          <Label layoutX="270.0" layoutY="25.0" prefHeight="23.0" prefWidth="50.0" text="Email:" textFill="WHITE">
+                                          <TextField fx:id="SupplierEmailSearch" layoutX="336.0" layoutY="97.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="14.0" layoutY="117.0" prefHeight="23.0" prefWidth="54.0" text="Phone:" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
                                           </Label>
-                                          <TextField layoutX="336.0" layoutY="24.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
-                                          <Label layoutX="268.0" layoutY="72.0" prefHeight="23.0" prefWidth="54.0" text="Phone:" textFill="WHITE">
-                                             <font>
-                                                <Font name="System Bold" size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <TextField layoutX="336.0" layoutY="71.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
-                                          <TextField layoutX="97.0" layoutY="116.0" prefHeight="26.0" prefWidth="114.0" promptText="Country" style="-fx-background-radius: 15;" />
-                                          <Button layoutX="741.0" layoutY="14.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" style="-fx-background-radius: 15; -fx-background-color: #641c9e;" text="Clear" textFill="WHITE">
+                                          <TextField fx:id="SupplierPhoneSearch" layoutX="97.0" layoutY="115.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="SupplierAdressSearch" layoutX="570.0" layoutY="48.0" prefHeight="26.0" prefWidth="62.0" promptText="Country" style="-fx-background-radius: 15;" />
+                                          <Button fx:id="ClearSupplier" layoutX="741.0" layoutY="14.0" mnemonicParsing="false" onAction="#ClearSupplierButton" prefHeight="38.0" prefWidth="80.0" style="-fx-background-radius: 15; -fx-background-color: #641c9e;" text="Clear" textFill="WHITE">
                                              <effect>
                                                 <DropShadow />
                                              </effect>
@@ -685,7 +677,7 @@
                                                 <Font name="System Bold" size="13.0" />
                                              </font>
                                           </Button>
-                                          <Button layoutX="741.0" layoutY="62.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" style="-fx-background-radius: 15; -fx-background-color: #c91717;" text="Delete" textFill="WHITE">
+                                          <Button fx:id="DeleteSupplier" layoutX="741.0" layoutY="62.0" mnemonicParsing="false" onAction="#DeleteSupplierButton" prefHeight="38.0" prefWidth="80.0" style="-fx-background-radius: 15; -fx-background-color: #c91717;" text="Delete" textFill="WHITE">
                                              <effect>
                                                 <DropShadow />
                                              </effect>
@@ -693,7 +685,7 @@
                                                 <Font name="System Bold" size="13.0" />
                                              </font>
                                           </Button>
-                                          <Button layoutX="741.0" layoutY="110.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" style="-fx-background-radius: 15; -fx-background-color: #136e1a;" text="Update" textFill="WHITE">
+                                          <Button fx:id="UpdateSupplier" layoutX="741.0" layoutY="110.0" mnemonicParsing="false" onAction="#UpdateSupplierButton" prefHeight="38.0" prefWidth="80.0" style="-fx-background-radius: 15; -fx-background-color: #136e1a;" text="Update" textFill="WHITE">
                                              <effect>
                                                 <DropShadow />
                                              </effect>
@@ -701,15 +693,20 @@
                                                 <Font name="System Bold" size="13.0" />
                                              </font>
                                           </Button>
-                                          <ComboBox layoutX="575.0" layoutY="25.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
-                                          <Label layoutX="11.0" layoutY="117.0" prefHeight="23.0" prefWidth="70.0" text="Address:" textFill="WHITE">
+                                          <Label layoutX="500.0" layoutY="72.0" prefHeight="23.0" prefWidth="59.0" text="Address:" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
                                           </Label>
-                                          <TextField layoutX="238.0" layoutY="116.0" prefHeight="26.0" prefWidth="114.0" promptText="City" style="-fx-background-radius: 15;" />
-                                          <TextField layoutX="371.0" layoutY="116.0" prefHeight="26.0" prefWidth="114.0" promptText="Street" style="-fx-background-radius: 15;" />
-                                          <TextField layoutX="503.0" layoutY="115.0" prefHeight="26.0" prefWidth="114.0" promptText="Zip code" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="SupplierCitySearch" layoutX="645.0" layoutY="48.0" prefHeight="26.0" prefWidth="62.0" promptText="City" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="SupplierStreetSearch" layoutX="570.0" layoutY="87.0" prefHeight="26.0" prefWidth="63.0" promptText="Street" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="SupplierZipCodeSearch" layoutX="643.0" layoutY="87.0" prefHeight="26.0" prefWidth="66.0" promptText="Zip code" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="SupplierLastNameSearch" layoutX="336.0" layoutY="49.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <Label layoutX="256.0" layoutY="50.0" prefHeight="23.0" prefWidth="75.0" text="LastName: " textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
                                        </children>
                                     </AnchorPane>
                                  </children>
@@ -787,18 +784,18 @@
                                     <DropShadow />
                                  </effect>
                                  <children>
-                                    <ComboBox layoutX="26.0" layoutY="14.0" prefHeight="26.0" prefWidth="218.0" promptText="Choose Your Method Of Search" style="-fx-background-radius: 15; -fx-background-color: #87878a;">
+                                    <ComboBox fx:id="SearchItemCombo" layoutX="26.0" layoutY="14.0" prefHeight="26.0" prefWidth="218.0" promptText="Choose Your Method Of Search" style="-fx-background-radius: 15; -fx-background-color: #87878a;">
                                        <effect>
                                           <DropShadow />
                                        </effect>
                                     </ComboBox>
-                                    <TextField alignment="TOP_CENTER" layoutX="261.0" layoutY="14.0" prefHeight="26.0" prefWidth="283.0" promptText="Type What you're Looking" style="-fx-background-radius: 15;" />
-                                    <Button layoutX="581.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="Search">
+                                    <TextField fx:id="SearchItemField" alignment="TOP_CENTER" layoutX="261.0" layoutY="14.0" prefHeight="26.0" prefWidth="283.0" promptText="Type What you're Looking" style="-fx-background-radius: 15;" />
+                                    <Button fx:id="SearchItem" layoutX="581.0" layoutY="14.0" mnemonicParsing="false" onAction="#SearchItemButton" prefHeight="26.0" prefWidth="72.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="Search">
                                        <effect>
                                           <DropShadow />
                                        </effect>
                                     </Button>
-                                    <Button layoutX="672.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="View All">
+                                    <Button fx:id="ItemViewAll" layoutX="672.0" layoutY="14.0" mnemonicParsing="false" onAction="#ItemViewAllButton" prefHeight="26.0" prefWidth="72.0" style="-fx-background-radius: 15; -fx-background-color: #87878a;" text="View All">
                                        <effect>
                                           <DropShadow />
                                        </effect>
@@ -808,14 +805,14 @@
                                           <DropShadow />
                                        </effect>
                                        <children>
-                                          <TableView layoutX="52.0" layoutY="15.0" prefHeight="234.0" prefWidth="673.0">
+                                          <TableView fx:id="ItemTableView" layoutX="52.0" layoutY="15.0" prefHeight="234.0" prefWidth="673.0">
                                              <columns>
-                                                <TableColumn prefWidth="92.79999160766602" text="Item ID" />
-                                                <TableColumn prefWidth="127.2000732421875" text="Item Name" />
-                                                <TableColumn prefWidth="105.59991455078125" text="Model" />
-                                                <TableColumn prefWidth="125.60003662109375" text="Stock Quantity" />
-                                                <TableColumn prefWidth="114.39996337890625" text="Price" />
-                                                <TableColumn prefWidth="108.00006103515625" text="Supplier ID" />
+                                                <TableColumn fx:id="ItemIDColumn" prefWidth="92.79999160766602" text="Item ID" />
+                                                <TableColumn fx:id="ItemNameColumn" prefWidth="127.2000732421875" text="Item Name" />
+                                                <TableColumn fx:id="ItemModelColumn" prefWidth="105.59991455078125" text="Model" />
+                                                <TableColumn fx:id="ItemStockQuantityColumn" prefWidth="125.60003662109375" text="Stock Quantity" />
+                                                <TableColumn fx:id="ItemPriceColumn" prefWidth="114.39996337890625" text="Price" />
+                                                <TableColumn fx:id="ItemSupplierIDColumn" prefWidth="108.00006103515625" text="Supplier ID" />
                                              </columns>
                                           </TableView>
                                        </children>
@@ -830,27 +827,27 @@
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
                                           </Label>
-                                          <TextField layoutX="112.0" layoutY="25.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="ItemIDSearch" layoutX="112.0" layoutY="25.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
                                           <Label layoutX="14.0" layoutY="69.0" prefHeight="23.0" prefWidth="85.0" text="Item Name: " textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
                                           </Label>
-                                          <TextField layoutX="112.0" layoutY="67.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
-                                          <TextField layoutX="112.0" layoutY="114.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="ItemNameSearch" layoutX="112.0" layoutY="67.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="ItemModelName" layoutX="112.0" layoutY="114.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
                                           <Label layoutX="282.0" layoutY="26.0" prefHeight="23.0" prefWidth="108.0" text="Stock Quantity:" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
                                           </Label>
-                                          <TextField layoutX="399.0" layoutY="25.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="ItemStockQuentity" layoutX="399.0" layoutY="25.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
                                           <Label layoutX="282.0" layoutY="68.0" prefHeight="23.0" prefWidth="54.0" text="Price:" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
                                           </Label>
-                                          <TextField layoutX="399.0" layoutY="67.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
-                                          <TextField layoutX="399.0" layoutY="114.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="ItemPriceSearch" layoutX="399.0" layoutY="67.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
+                                          <TextField fx:id="ItemSupplierIDSearch" layoutX="399.0" layoutY="114.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 15;" />
                                           <Label layoutX="14.0" layoutY="118.0" prefHeight="23.0" prefWidth="62.0" text="Model:" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="14.0" />
@@ -861,7 +858,7 @@
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
                                           </Label>
-                                          <Button layoutX="608.0" layoutY="18.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="162.0" style="-fx-background-radius: 15; -fx-background-color: #641c9e;" text="Clear" textFill="WHITE">
+                                          <Button fx:id="ItemClear" layoutX="608.0" layoutY="18.0" mnemonicParsing="false" onAction="#ItemClearButton" prefHeight="38.0" prefWidth="162.0" style="-fx-background-radius: 15; -fx-background-color: #641c9e;" text="Clear" textFill="WHITE">
                                              <effect>
                                                 <DropShadow />
                                              </effect>
@@ -869,7 +866,7 @@
                                                 <Font name="System Bold" size="13.0" />
                                              </font>
                                           </Button>
-                                          <Button layoutX="608.0" layoutY="64.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="162.0" style="-fx-background-radius: 15; -fx-background-color: #c91717;" text="Delete" textFill="WHITE">
+                                          <Button fx:id="ItemDelete" layoutX="608.0" layoutY="64.0" mnemonicParsing="false" onAction="#ItemDeleteButton" prefHeight="38.0" prefWidth="162.0" style="-fx-background-radius: 15; -fx-background-color: #c91717;" text="Delete" textFill="WHITE">
                                              <effect>
                                                 <DropShadow />
                                              </effect>
@@ -877,7 +874,7 @@
                                                 <Font name="System Bold" size="13.0" />
                                              </font>
                                           </Button>
-                                          <Button layoutX="608.0" layoutY="110.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="162.0" style="-fx-background-radius: 15; -fx-background-color: #136e1a;" text="Update" textFill="WHITE">
+                                          <Button fx:id="ItemUpdate" layoutX="608.0" layoutY="110.0" mnemonicParsing="false" onAction="#ItemUpdateButton" prefHeight="38.0" prefWidth="162.0" style="-fx-background-radius: 15; -fx-background-color: #136e1a;" text="Update" textFill="WHITE">
                                              <effect>
                                                 <DropShadow />
                                              </effect>
@@ -953,7 +950,7 @@
                                                 <Font name="System Bold" size="13.0" />
                                              </font>
                                           </RadioButton>
-                                          <Button fx:id="SaveEmployee1" layoutX="137.0" layoutY="457.0" mnemonicParsing="false" onAction="#SaveAdminButton" prefHeight="30.0" prefWidth="219.0" style="-fx-background-radius: 15; -fx-background-color: #313133;" text="Save Admin" textFill="WHITE">
+                                          <Button fx:id="SaveAdmin" layoutX="137.0" layoutY="457.0" mnemonicParsing="false" onAction="#SaveAdminButton" prefHeight="30.0" prefWidth="219.0" style="-fx-background-radius: 15; -fx-background-color: #313133;" text="Save Admin" textFill="WHITE">
                                              <font>
                                                 <Font name="Arial Bold" size="14.0" />
                                              </font>

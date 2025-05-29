@@ -12,6 +12,7 @@ module org.example.rlproject {
     requires com.almasb.fxgl.all;
     requires java.sql;
     requires java.desktop;
+    requires jasperreports;
 
     opens org.example.rlproject to javafx.fxml;
     exports org.example.rlproject;
